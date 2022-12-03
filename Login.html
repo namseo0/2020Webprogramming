@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>로그인 페이지</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[id="name"]').val('이름을 입력하세요.');
+        });        
+        $(document).ready(function () {
+            $('input[id="password"]').val('비밀번호를 입력하세요.');
+        });
+    </script>
+    <script>
+        function ok() {
+            var name = document.getElementById("name");
+            var password = document.getElementById("password");
+            if (name.value == '이름을 입력하세요.') {
+                alert("성명을 입력해 주세요!");
+                field.focus();
+                return false;
+            }
+            if (password.value == '비밀번호를 입력하세요.') {
+                alert("비밀번호를 입력해 주세요!");
+                field.focus();
+                return false;
+            }
+            alert(name.value + "님 환영합니다 :-)");
+            window.location = "Home.html";
+        }
+        function cancle() {
+            window.location = "Home.html";
+        }
+    </script>
+    <style>
+        #menubar {
+            background: rgb(63, 79, 92);
+        }
+
+        #menubar ul {
+            /* 여백과 패딩 모두 0 */
+            margin: 100;
+            padding: 30;
+            height: 25px;
+            /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+        }
+
+        #menubar ul li {
+            display: inline-block;
+            /* 새 줄로 넘어가지 않게 */
+            list-style-type: none;
+            /* 마커 삭제 */
+            padding: 0px 15px;
+            /* top=bottom=0, left=right=15px */
+        }
+
+        #menubar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #menubar ul li a:hover {
+            color: rgb(212, 211, 99);
+            /* 마우스 올라 갈 때 색 */
+        }
+
+        body {
+            background-color: rgb(134, 156, 177);
+        }
+
+        h2 {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            text-shadow: 3px 3px rgb(70, 81, 90);
+        }
+
+        h6 {
+            color: rgb(70, 81, 90);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><span style="font-size: 35px;">ChunCheon</span>청춘0.zero</h2>
+    <nav id="menubar">
+        <ul>
+
+            <li></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Comunity.html">Introduce</a></li>
+            <li><a href="School.html">School</a></li>
+            <li><a href="Trans.html">Transportation</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Join.html">Join us</a></li>
+        </ul>
+    </nav>
+
+    <br><br>
+
+    <form>
+        <fieldset>
+            <legend>[ Login ]</legend>
+            <table>
+                <tr>
+                    <td>성명</td>
+                    <td><input id="name" type="text"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input id="password" type="text"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <br>
+    <button type="submit" onclick="ok()">로그인</button>
+    <button type="submit" onclick="cancle()">취소</button>
+    <br><br><br><br>
+    <hr>
+    <h6> MADE BY 20195153 NamSeoyoung</h6>
+</body>
+
+</html>

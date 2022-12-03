@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원가입 페이지</title>
+    <script>
+        function ok() {
+            var name = document.getElementById("name");
+            var password = document.getElementById("password");
+            if (name.value.length == 0) {
+                alert("성명을 입력해 주세요!");
+                field.focus();
+                return false;
+            }
+            if (password.value.length == 0) {
+                alert("비밀번호를 설정해 주세요!");
+                field.focus();
+                return false;
+            }
+            alert(name.value + "님 회원가입 축하드립니다 :-)");
+            window.location = "Home.html";
+        }
+        function cancle() {
+            alert("홈페이지로 이동합니다.");
+            window.location = "Home.html";
+        }
+    </script>
+    <style>
+        #menubar {
+            background: rgb(63, 79, 92);
+        }
+
+        #menubar ul {
+            /* 여백과 패딩 모두 0 */
+            margin: 100;
+            padding: 30;
+            height: 25px;
+            /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+        }
+
+        #menubar ul li {
+            display: inline-block;
+            /* 새 줄로 넘어가지 않게 */
+            list-style-type: none;
+            /* 마커 삭제 */
+            padding: 0px 15px;
+            /* top=bottom=0, left=right=15px */
+        }
+
+        #menubar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #menubar ul li a:hover {
+            color: rgb(212, 211, 99);
+            /* 마우스 올라 갈 때 색 */
+        }
+
+        body {
+            background-color: rgb(134, 156, 177);
+        }
+
+        h2 {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            text-shadow: 3px 3px rgb(70, 81, 90);
+        }
+
+        h6 {
+            color: rgb(70, 81, 90);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><span style="font-size: 35px;">ChunCheon</span>청춘0.zero</h2>
+    <nav id="menubar">
+        <ul>
+            <li></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Comunity.html">Introduce</a></li>
+            <li><a href="School.html">School</a></li>
+            <li><a href="Trans.html">Transportation</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Join.html">Join us</a></li>
+        </ul>
+    </nav>
+
+    <br><br>
+    <h3>&nbsp;<span style="color:rgb(0, 0, 0);">[ Join us ]</span></h3>
+    <hr><br>
+
+    <h4>
+        <필수 정보>
+    </h4>
+    <hr>
+
+    <form>
+        <table>
+            <tr>
+                <td>성명</td>
+                <td><input id="name" type="text"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input id="password" type="text"></td>
+            </tr>
+            <tr>
+                <td>나이</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>소속 대학</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>전공</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>거주 지역&nbsp;&nbsp;</td>
+                <td>
+                    <select name="style">
+                        <option>교동</option>
+                        <option>조운동</option>
+                        <option>약사명동</option>
+                        <option>근화동</option>
+                        <option>후평동</option>
+                        <option>효자동</option>
+                        <option>석사동</option>
+                        <option>퇴계동</option>
+                        <option>강남동</option>
+                        <option>신북읍</option>
+                        <option>동면</option>
+                        <option>신사우동</option>
+                        <option>소양동</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>연락처&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" placeholder=010-0000-0000></td>
+            </tr>
+        </table>
+    </form>
+
+    <br>
+    <h4>
+        < 추가 정보>
+    </h4>
+    <hr>
+
+    <form>
+        <table>
+            <tr>
+                <td>생년월일</td>
+                <td><input type="text">년<input type="text" col="5">월<input type="text">일</td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    여성 <input type="checkbox" value="woman">
+                    남성 <input type="checkbox" value="man">
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+    <br>
+    <h4>
+        < 전체 동의>
+    </h4>
+    <hr>
+
+    <form>
+        <fieldset>
+            <legend>가입 시</legend>
+            회원님의 개인 정보는 자료 수집을 위하여 사용되며, 탈퇴 후 1년 뒤 폐기됩니다.
+
+        </fieldset>
+        <label>
+            <input type="radio" name="agree" value="Yes">동의합니다.
+        </label><label>
+            <input type="radio" name="agree" value="No">동의하지 않습니다.
+        </label>
+    </form>
+
+    <br><br>
+    <hr>
+    <button type="submit" onclick="ok()">회원 가입</button>
+    <button type="submit" onclick="cancle()">취소</button>
+    <br><br><br><br>
+    <hr>
+    <h6> MADE BY 20195153 NamSeoyoung</h6>
+</body>
+
+</html>
